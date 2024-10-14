@@ -1,0 +1,53 @@
+<html>
+    <head>javascript tutorial</head>
+    <body>
+        <p id ="demo"></p>
+    </body>
+    <script>
+        let cars= ["bmw", "volvo", "honda"]; //let helps to change array
+        document.getElementById("demo").innerHTML = cars; 
+
+        let bmw = cars[0];
+        document.getElementById("demo").innerHTML = bmw; 
+
+        let len=cars.length;
+        document.getElementById("demo").innerHTML = len; 
+
+        let last=cars[cars.length-1];
+        document.getElementById("demo").innerHTML = last; 
+
+        cars.forEach((item,index)=>{
+            console.log(item,index);
+        });
+
+        document.getElementById("demo").innerHTML = cars.toString(); //converts array to string type
+
+        let last1=cars.pop();
+        document.getElementById("demo").innerHTML = last1; //pops the last element
+
+        let last2=cars[cars.length-1];
+        console.log(last2);
+
+        cars.push("Audi");
+        document.getElementById("demo").innerHTML = cars;
+
+        cars.shift(); //removes the first element from array
+        document.getElementById("demo").innerHTML = cars;
+
+
+        cars.unshift("hyundai"); //adds first element in the array
+        document.getElementById("demo").innerHTML = cars;
+
+        let bikes=["yamaha", "suzuki","royal enfield"];
+        let vehicles= cars.concat(bikes);
+        document.getElementById("demo").innerHTML = vehicles;
+
+        vehicles.sort();
+        document.getElementById("demo").innerHTML = vehicles;
+
+        vehicles.reverse();
+        document.getElementById("demo").innerHTML = vehicles;
+
+
+    </script>
+</html>
