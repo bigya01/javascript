@@ -1,0 +1,23 @@
+<!-- inner function has access to other functions variables=closure -->
+ <!-- three scope-its own, other fun var and global var -->
+ <html><head>
+    <title>JS CLOSURES</title>
+    <p id="demo">
+    </p>
+</head>
+<body>
+    <script>
+       var a = 10
+       function First_func(){
+        var b =20
+        function Second_func(){
+            var c =20+a+b
+            return c
+        }
+        return Second_func();
+       }
+       var sum =First_func();
+       document.write("the sum is "+ sum + '<br>')
+    </script>
+</body>
+</html>
