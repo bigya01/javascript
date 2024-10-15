@@ -1,0 +1,25 @@
+<!-- getter to get value of object
+setter to set value of  -->
+<html>
+    <head>
+        <title>Javascript Objects</title></head>
+        <body>
+            <h1>Creating Javascript obj</h1>
+            <p id="demo"></p>
+
+            <script>
+              var car ={
+                model : "BMW 320d",
+                color : "Navy Blue",
+                fuel_type: "Diesel",
+
+                get fuel(){
+                    return this.fuel_type
+                },
+              };
+
+            document.getElementById("demo").innerHTML = car.fuel;
+
+            </script>
+            </body>
+            </html>
