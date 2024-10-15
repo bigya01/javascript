@@ -1,0 +1,23 @@
+<html><head>
+    <title>JS Promises</title>
+    <p id="demo">
+    </p>
+</head>
+<body>
+    <script>
+       let car = new Promise(function(resolve,reject){
+        fuel_fulltank =true;
+        if(fuel_fulltank)
+            resolve()
+        else
+            reject
+       })
+
+       car.then(function(){
+        document.write("The fuel tank is full. happy driving")
+       }).catch(function(){
+        document.write("sorry the fuel tank is not full")
+       })
+    </script>
+</body>
+</html>
