@@ -1,0 +1,22 @@
+<!-- returns multiple values -->
+<html>
+    <head><title>Javascript Functions</title>
+    <p id="demo"></p></head>
+    <body>
+        <script>
+            function *generateSeq(){
+                yield 1;
+                yield 2;
+                return;
+            }
+            let generator =generateSeq();
+            let one =generator.next()
+            let two =generator.next()
+
+            alert(JSON.stringify(one)) //turns to json
+            alert(JSON.stringify(two))
+            document.getElementById("demo").innerHTML=x()
+
+         </script>
+    </body>
+</html>
