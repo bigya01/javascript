@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <h1>Js async await</h1>
+    </head>
+    <body>
+        <script>
+            let result =function(score){
+                return new Promise(function(resolve,reject){
+                    console.log("Calculation")
+                    if (score>50){
+                        resolve("you have passed")
+                    }
+                    else
+                        reject("You have failed")
+                })
+            }
+            let grade = function(response){
+                return new Promise(function(resolve,reject){
+                    console.log("Calculation results...")
+                    resolve("your grade is A "+ response)
+                })
+            }
+           async function Graderesults() {
+            try{   
+            const response= await result(20)
+                console.log("Results received")
+                const finalgrade = await grade(response)
+                console.log(finalgrade)
+                }
+            
+        catch(err){
+            console.log(err)
+        }
+    }
+    Graderesults()
+        </script>
+    </body>
+</html>
