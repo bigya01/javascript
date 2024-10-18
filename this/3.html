@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <h1>Js thist</h1>
+</head>
+
+<body>
+    <script>
+        const random ={
+        name: "John",
+        video: ["js","this","keyword"],
+        info(){
+            this.video.forEach(function(tag){
+                console.log(this.name, tag)
+            },this)
+        }
+       }
+       random.info()
+
+    </script>
+</body>
+
+</html>
