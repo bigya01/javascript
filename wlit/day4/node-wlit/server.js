@@ -18,7 +18,7 @@ const server = http.createServer((req,res) => {
                 res.end("<h1>about HoME Page <h1>");
                 break;
             case "/contact":
-                res.end("<h1>contact HoME Page <h1>");
+                res.end("<h1>contact  Page <h1>");
                 break;
             default:
                 res.end("<h1>Page not found <h1>");
