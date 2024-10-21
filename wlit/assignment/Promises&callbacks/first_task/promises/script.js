@@ -4,6 +4,7 @@ const request = fetch(DEMO_URL)
     console.log(response);
     return response.json();
 })
+
 .then((data) => {
     document.getElementById("title").textContent="Title : "+data.title
     document.getElementById("Id").textContent="ID : "+data.id
