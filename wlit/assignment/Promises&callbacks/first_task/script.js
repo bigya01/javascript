@@ -11,6 +11,7 @@ const request = fetch(DEMO_URL)
     document.getElementById("Body").textContent="Body : "+data.body
 
 })
+
 .catch ((error)=>{
     console.log("error: ",error)
 })
