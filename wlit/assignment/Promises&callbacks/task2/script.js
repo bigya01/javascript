@@ -29,7 +29,7 @@ const promise = new Promise((resolve,reject)=>{
 
 
 //async-await
-const sumOfNaturalNumbers = async function () {
+const addd = async function () {
     return new Promise((resolve) => {
         let sum = 0;
         for (let i = 1; i <= 4; i++) {
@@ -39,10 +39,11 @@ const sumOfNaturalNumbers = async function () {
     });
 };
 
-sumOfNaturalNumbers().then((sum) => {
-    console.log("the sum using async await is "+sum);
-});
+async function main() {
+    const sum = await addd(); 
+    console.log("Sum using async-await: " + sum);
+}
 
-
+main(); 
 
 
