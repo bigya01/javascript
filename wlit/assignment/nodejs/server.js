@@ -2,7 +2,8 @@ import http from 'http';
 import fs from 'fs';
 import path from 'path';
 
-// Define the file path for the JSON file
+const __dirname = new URL('.', import.meta.url).pathname;
+
 const filepath = path.join(__dirname, 'post-lists.json');
 
 // Create HTTP server
