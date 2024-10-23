@@ -94,17 +94,30 @@ router.post('/delete/:id', async function(req,res,next){
   res.redirect("/");
 });
 
-router.post('/edit/:id', async function(req,res,next){
+router.get('/edit/:id', async function(req,res,next){
   
   try{
     const bookId = req.params.id;
-
-    await Book.findByIdAndDelete(bookId);
+    const addedbook=await Book.findById(bookId);
+    console.log("Book ID:", bookId);
+    res.render('edit-books',{addedbook});
   }
   catch(error){
     console.log(error);
   }
-  res.redirect("/");
+  // res.redirect("/");
+});
+
+router.post('/update/:id', async function(req, res, next) {
+  try {
+    const bookId = req.params.id;
+    const updatedData = req.body; // Get the updated data from the form
+    await Book.findByIdAndUpdate(bookId, updatedData, { new: true }); // Update the book
+    res.redirect("/"); // Redirect to the home page after updating
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Error updating book.");
+  }
 });
 
 

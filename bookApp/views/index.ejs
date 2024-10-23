@@ -29,9 +29,10 @@
         </h5>
         <p class="card-text" ><%= book.description %> <br></p>
         <p class="card-text" ><%= book.author %> <br></p>
-        <a href="#" class="btn btn-primary ">Save book</a>
 
-
+        <form method="get" action="/edit/<%= book._id %>">
+          <button type="submit" class="btn btn-primary">Edit book</button>
+      </form>
         <form method="POST" action="/delete/<%= book._id %>">
           <button type="submit" class="btn btn-primary">Delete book</button>
       </form>
