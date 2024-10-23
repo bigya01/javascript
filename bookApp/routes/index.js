@@ -81,13 +81,25 @@ router.post('/save', async function(req,res,next){
   res.redirect("/");
 });
 
-router.delete('/delete/:id', async function(req,res,next){
+router.post('/delete/:id', async function(req,res,next){
   
   try{
     const bookId = req.params.id;
 
-    await Book.findByIdAndDelete(new ObjectId(bookId));
-    console.log("BOok deleted", Book)
+    await Book.findByIdAndDelete(bookId);
+  }
+  catch(error){
+    console.log(error);
+  }
+  res.redirect("/");
+});
+
+router.post('/edit/:id', async function(req,res,next){
+  
+  try{
+    const bookId = req.params.id;
+
+    await Book.findByIdAndDelete(bookId);
   }
   catch(error){
     console.log(error);
