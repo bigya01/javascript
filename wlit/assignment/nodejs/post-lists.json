@@ -1,0 +1,15 @@
+[
+    {
+      "_id": "1",
+      "name": "First Post",
+      "description": "This is the description for the first post.",
+      "created_by": "User1"
+    },
+    {
+      "_id": "2",
+      "name": "Second Post",
+      "description": "This is the description for the second post.",
+      "created_by": "User2"
+    }
+  ]
+  
